@@ -6,6 +6,30 @@ export async function middleware(req: NextRequest) {
   const url = req.nextUrl.clone()
   const { pathname } = req.nextUrl
 
+  // If visiting the root page `/`, redirect to dashboard when user already authenticated.
+  if (pathname === '/') {
+    const cookieToken = req.cookies.get('invoger_token')?.value
+    const authHeader = req.headers.get('authorization')
+    const bearerMatch = authHeader?.match(/^Bearer\s+(.+)$/i)
+    const headerToken = bearerMatch ? bearerMatch[1] : undefined
+    const token = cookieToken || headerToken
+    if (token) {
+      try {
+        const mod = await import('./src/lib/auth/admin')
+        const verifyIdToken = mod.verifyIdToken
+        if (verifyIdToken) {
+          await verifyIdToken(token)
+          const redirectUrl = req.nextUrl.clone()
+          redirectUrl.pathname = '/menu/Dashboard'
+          return NextResponse.redirect(redirectUrl)
+        }
+      } catch (err) {
+        // verification failed or admin not configured — fall through to show login
+      }
+    }
+    return NextResponse.next()
+  }
+
   // only protect /menu/*
   if (!pathname.startsWith('/menu')) return NextResponse.next()
 
