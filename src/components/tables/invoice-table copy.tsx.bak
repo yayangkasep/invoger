@@ -1,0 +1,40 @@
+"use client"
+
+import * as React from "react"
+import { cn } from "@/lib/utils"
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card"
+
+export default function InvoiceTable() {
+  return (
+    <div className={cn("flex flex-1 flex-col h-screen overflow-hidden")}>
+      {/* Container utama tanpa scroll dan padding minimal */}
+      <div className="w-full h-full grid grid-cols-[8fr_4fr] gap-2 p-2">
+        {/* Card kiri (lebih besar) */}
+        <div className="flex">
+          <Card className="flex-1 h-full">
+            <CardHeader>
+              <CardTitle>Generator Struk</CardTitle>
+            </CardHeader>
+            <CardContent className="h-full">
+              {/* Konten kiri di sini */}
+            </CardContent>
+          </Card>
+        </div>
+
+        {/* Card kanan (lebih kecil) */}
+        <div className="flex">
+          <Card className="flex-1 h-full">
+            <CardHeader>
+              <CardTitle>Pratinjau Struk</CardTitle>
+            </CardHeader>
+            <CardContent className="flex items-center justify-center h-full">
+              <div className="rounded-md border border-input bg-background p-4 text-muted-foreground w-full h-[60%] flex items-center justify-center">
+                Pilih outlet untuk melihat pratinjau struk
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+      </div>
+    </div>
+  )
+}
