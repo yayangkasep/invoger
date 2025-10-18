@@ -6,7 +6,7 @@
 import api from './api'
 import { getAuthHeaders } from './jwt'
 
-const TOKEN_KEY = 'invoger_id_token'
+const TOKEN_KEY = 'invoger_token'
 
 /**
  * Sign in using email/password via the Firebase REST wrapper in api.ts.
