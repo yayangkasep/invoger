@@ -1,0 +1,634 @@
+.invoice_mini,
+.sales_order_mini {
+  width: 264px;
+  margin: auto;
+  padding: 0 4px;
+  color: #000;
+  font-family: Arial !important;
+}
+
+.invoice_mini h1,
+.invoice_mini h2,
+.invoice_mini h3,
+.invoice_mini h4,
+.invoice_mini h5,
+.invoice_mini h6,
+.sales_order_mini h1,
+.sales_order_mini h2,
+.sales_order_mini h3,
+.sales_order_mini h4,
+.sales_order_mini h5,
+.sales_order_mini h6 {
+  font-family: Arial !important;
+}
+
+.invoice_mini .text-danger,
+.sales_order_mini .text-danger {
+  color: red !important;
+}
+
+.invoice_mini .border-y,
+.sales_order_mini .border-y {
+  padding: 5px 0;
+  border-top: 1px solid #888;
+}
+
+.invoice_mini .cartAmount,
+.sales_order_mini .cartAmount {
+  border-top: 1px solid #888;
+  border-bottom: 1px solid #888;
+}
+
+.invoice_mini .rightAuto,
+.sales_order_mini .rightAuto {
+  margin: 0 0 0 auto;
+}
+
+.invoice_mini span.point p,
+.sales_order_mini span.point p {
+  margin: 0 auto !important;
+  padding: 0 !important;
+}
+
+.invoice_mini .note,
+.sales_order_mini .note {
+  font-size: 11px !important;
+}
+
+.invoice_mini .note h6,
+.sales_order_mini .note h6 {
+  font-size: 0.4375rem;
+  padding: 0.4375rem;
+}
+
+.invoice_mini .note > p,
+.sales_order_mini .note > p {
+  margin: 0 auto !important;
+  padding: 0 !important;
+}
+
+.invoice_mini.lx300 img,
+.sales_order_mini.lx300 img {
+  max-width: 220px;
+}
+
+.box {
+  position: relative;
+}
+
+.ribbon {
+  width: 170px;
+  height: 140px;
+  overflow: hidden;
+  position: absolute;
+}
+
+.ribbon div {
+  position: absolute;
+  display: block;
+  width: 204px;
+  padding: 42px 31px;
+  background-color: #3498db;
+  box-shadow: 0 5px 10px #0000001a;
+  color: #fff;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 9px;
+  line-height: 17px;
+}
+
+.ribbon-content {
+  top: -10px;
+  left: -45px;
+}
+
+div.ribbon-content {
+  right: 47px;
+  top: 47px;
+  transform: rotate(-45deg);
+}
+
+.invoice_mini.lx300,
+.sales_order_mini.lx300,
+.packingslip_container.lx300 {
+  margin: 0 0 0 20px !important;
+  width: 520px !important;
+  letter-spacing: 3px !important;
+}
+
+.invoice_mini.lx300 h2,
+.sales_order_mini.lx300 h2,
+.packingslip_container.lx300 h2 {
+  letter-spacing: 8px !important;
+}
+
+@media print {
+  print-mode {
+    display: none;
+    visibility: hidden;
+    height: 0px;
+  }
+
+  .ribbon div {
+    background-color: none !important;
+    color: #000;
+    opacity: 0.7;
+    border-style: dotted none;
+  }
+
+  .ribbon .ribbon-content:after,
+  .ribbon .ribbon-content:before {
+    display: none;
+  }
+
+  .sales_order_mini > .invoiceHeader,
+  .sales_order_mini h6,
+  .sales_order_mini table {
+    font-family: Arial, Helvetica, sans-serif !important;
+  }
+
+  .toast {
+    display: none !important;
+  }
+}
+
+table.plain {
+  border-collapse: collapse;
+}
+
+table.plain thead tr th {
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);
+  height: 28px;
+  line-height: 16px;
+  padding: 2px 7px;
+  color: #fff;
+  font-weight: 700;
+}
+
+table.plain thead tr {
+  background-color: #fceca3 !important;
+  background-image: none !important;
+}
+
+table.plain thead tr th {
+  color: #000;
+  text-shadow: none;
+}
+
+table.plain th,
+table.plain td {
+  padding: 5px 7px;
+}
+
+table.plain tr.thick th,
+table.plain tr.thick td {
+  border-bottom: 3px solid black;
+}
+
+table.plain tbody tr:nth-child(2n) {
+  background-color: #f6f6f6;
+}
+
+table.plain a.thumb {
+  margin: 0 5px 0 0;
+  padding: 0;
+  float: left;
+  display: block;
+}
+
+table.plain a.thumb img {
+  width: 40px;
+  height: 40px;
+  background-color: #fff;
+  display: block;
+  background-color: #d8dfea;
+  border: 1px solid #bbb;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+}
+
+table.plain p {
+  color: #2b4e75;
+  font-style: italic;
+  margin: 0;
+  padding: 0;
+}
+
+table.plain div.text {
+  padding: 2px 0 0;
+}
+
+table.plain tbody td a,
+table.plain tbody td a:visited {
+  display: block;
+  color: #00f;
+  text-decoration: none;
+}
+
+table.plain tbody td:nth-child(-n + 3) a,
+table.plain tbody td:nth-child(-n + 3) a:visited {
+  font-weight: 700;
+}
+
+table.plain tbody td a:hover {
+  text-decoration: underline;
+}
+
+table.plain tr input[type="checkbox"] {
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+
+table.plain tr input.txtPrice {
+  border: solid 1px #c8d3df;
+  padding: 3px;
+  text-align: right;
+}
+
+table.plain tr.group {
+  background-color: #fdf3c6 !important;
+}
+
+table.plain tr.group a {
+  color: #000 !important;
+}
+
+table.plain thead tr th a {
+  color: #fff;
+}
+
+table.plain th.borderLRB0,
+table.plain td.borderLRB0 {
+  border-left-width: 0px !important;
+  border-right-width: 0px !important;
+  border-bottom-width: 0px !important;
+  background-color: #fff !important;
+}
+
+table.plain th.number,
+table.plain td.number {
+  text-align: right;
+}
+
+table.plain th.numberCenter,
+table.plain td.numberCenter {
+  text-align: center;
+}
+
+table.plain th.red,
+table.plain td.red {
+  color: red;
+  text-align: right;
+}
+
+table.plain td.top {
+  vertical-align: top;
+}
+
+table.plain td.noTopPad {
+  padding-top: 0;
+}
+
+table.plain td.small {
+  font-size: 11px;
+}
+
+table.plain tr.grid_footer th,
+table.plain tr.grid_footer td {
+  border-width: 0px;
+  background-color: #fff;
+}
+
+table.plain span.serial {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+table.plain tr.grid_footer table th,
+table.plain tr.grid_footer table td {
+  padding: 5px 0 5px 5px;
+  background-color: #fff;
+}
+
+table.plain td .inlineMarginLeft {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+table.rightAuto {
+  margin: 0 0 0 auto;
+}
+
+table ul.float {
+  margin: 0;
+  padding: 0;
+  list-style-type: circle;
+  list-style-position: inside;
+}
+
+table ul.float li {
+  margin: 0 20px 0 0;
+  padding: 0;
+  float: left;
+  display: block;
+}
+
+table ul.float li a {
+  text-decoration: none;
+}
+
+table ul.float li a:hover {
+  text-decoration: underline;
+}
+
+div.scroll {
+  width: 100%;
+  overflow: auto;
+  padding: 0 0 2px;
+}
+
+table.fixed {
+  table-layout: fixed;
+}
+
+table.footer_row {
+  margin: 5px 8px 0 auto;
+}
+
+table.footer_row td.currency,
+table.footer_row td:last-child {
+  padding: 5px 0 5px 5px;
+  text-align: right;
+}
+
+table.footer_row th {
+  padding: 5px;
+  text-align: right;
+  float: left;
+}
+
+table.footer_adjust {
+  margin: -10px 18px 0 auto;
+}
+
+table.footer_adjust td.currency,
+table.footer_adjust td:last-child {
+  padding: 5px 0 5px 5px;
+  text-align: right;
+}
+
+table.footer_adjust th {
+  padding: 5px 23px 5px 5px;
+  text-align: right;
+  float: left;
+}
+
+table.total-all-grid {
+  width: 100% !important;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+table.manufacture {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table.manufacture th {
+  background-color: #fceca3 !important;
+}
+
+table.manufacture td {
+  border: 1px solid #bbbbbb !important;
+}
+
+table.accounting {
+  max-width: 1000px;
+  border-collapse: collapse;
+}
+
+table.accounting thead tr th {
+  border-top: 1px solid #999;
+  border-bottom: 1px solid #999;
+  height: 28px;
+  line-height: 16px;
+  color: #444;
+  background-color: #fceca3 !important;
+}
+
+table.accounting tbody tr:nth-child(2n) {
+  background-color: #f6f6f6;
+}
+
+table.accounting th,
+table.accounting td {
+  padding: 7px;
+  border-bottom: 1px solid black;
+}
+
+table.accounting tbody td a,
+table.accounting tbody td a:visited {
+  color: #00f;
+  text-decoration: none;
+}
+
+table.accounting tbody td a:hover {
+  text-decoration: underline;
+}
+
+table.accounting tr input.txtPrice {
+  border: solid 1px #c8d3df;
+  padding: 3px;
+  text-align: right;
+}
+
+table.accounting th.number,
+table.accounting td.number {
+  text-align: right;
+}
+
+table.accounting th.red,
+table.accounting td.red {
+  color: red;
+  text-align: right;
+}
+
+table.accounting th.bordertop,
+table.accounting td.bordertop {
+  border-top: 1px #999 solid;
+}
+
+table.accounting tfoot td,
+table.accounting tfoot th {
+  padding-bottom: 20px;
+}
+
+table.main tbody tr.main:nth-child(2n) {
+  background-color: #fff;
+}
+
+table.main tbody tr.main:nth-child(4n-1) {
+  background-color: #f6f6f6;
+}
+
+table.main table thead tr {
+  background-color: #fceca3 !important;
+  background-image: none !important;
+}
+
+table.main table thead tr th {
+  border: 1px solid #9e9e9e;
+  color: #000;
+  text-shadow: none;
+}
+
+.cartItems .flow {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.cartItems .flow > li {
+  width: calc(33% - 17px);
+  float: left;
+  list-style: none;
+  padding: 5px 7px;
+  border: solid 1px #d8d8d8;
+}
+
+.cartItems .flow td {
+  width: calc(33% - 17px);
+  float: left;
+  list-style: none;
+  padding: 5px 7px;
+  border: solid 1px #d8d8d8;
+  display: table-cell;
+}
+
+.cartItems .flow td > p {
+  color: #2b4e75;
+  font-style: italic;
+  margin: 0;
+  padding: 0;
+}
+
+.listReturn tr.item td:nth-child(2) {
+  width: 10% !important;
+}
+
+.listReturn tr.item td:nth-child(3) {
+  width: 10% !important;
+}
+
+.listReturn tr.item td:nth-child(5) {
+  width: 10% !important;
+}
+
+.listReturn tr.item td:nth-child(6) {
+  width: 5% !important;
+}
+
+.listReturn tr.item td:nth-child(7) {
+  width: 10% !important;
+}
+
+.listReturn a.head {
+  padding: 10px 0 10px 10px;
+  display: block;
+  width: 50%;
+}
+
+.listReturn td.numberCenter {
+  text-align: right !important;
+}
+
+.listReturn table.summary tbody {
+  padding-top: 20px !important;
+  display: block;
+}
+
+table.paidAmount {
+  float: right;
+  margin-top: -10px;
+  text-align: right;
+  padding-right: 7px;
+}
+
+table.paidAmount th {
+  padding: 0 0 1px;
+}
+
+table.paidAmount td.currency {
+  width: 20px;
+  text-align: left;
+}
+
+table.paidAmount tr td:nth-child(2) {
+  padding: 0 5px;
+}
+
+div.zebra {
+  display: table;
+  border-collapse: collapse;
+}
+
+div.zebra > div {
+  display: table-cell;
+}
+
+div.zebra > div > strong {
+  display: block;
+  border: 1px solid #525252;
+  background-color: #545454;
+  background-image: -webkit-gradient(
+    linear,
+    50% 0,
+    50% 100%,
+    color-stop(0%, #888),
+    color-stop(100%, #545454)
+  );
+  background-image: -webkit-linear-gradient(#888, #545454);
+  background-image: -moz-linear-gradient(#888, #545454);
+  background-image: -o-linear-gradient(#888, #545454);
+  background-image: linear-gradient(#888, #545454);
+  -webkit-box-shadow: inset 0 2px 0 -1px rgba(255, 255, 255, 0.2);
+  -moz-box-shadow: inset 0 2px 0 -1px rgba(255, 255, 255, 0.2);
+  box-shadow: inset 0 2px 0 -1px #fff3;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);
+  height: 28px;
+  line-height: 24px;
+  border-bottom: 1px solid #333;
+  padding: 2px 7px;
+  color: #fff;
+  font-weight: 700;
+}
+
+div.zebra > div > span {
+  display: block;
+  padding: 5px 7px;
+  border: solid 1px #d8d8d8;
+  font-weight: 700;
+}
+
+div.zebra > div > span.number {
+  text-align: right;
+}
+
+qrcode.qrcode-custom {
+  margin-top: -20px;
+}
+
+.print_container > div.print-error-message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  text-align: center;
+}
+
+.print_container > div.print-error-message h1 {
+  color: #dc3545 !important;
+  font-weight: 500;
+}
